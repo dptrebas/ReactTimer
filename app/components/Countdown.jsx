@@ -1,15 +1,16 @@
 // Countdown Component for the Weather app
-
 var React = require('react');
+var TimerClock = require('TimerClock');
 
-// Make this a stateless functional component and only return one thing - Using fat arrows
-var Countdown = (props) => {
-		return (
+var Countdown = React.createClass({
+	render: function () {
+		return(
 			<div>
-				<h1 className="text-center page-title">Countdown</h1>
-				<p>This is Where the countdown goes</p>
+				<TimerClock totalSeconds={129}/>
 			</div>
 		);
-};
+	}
+
+});
 
 module.exports = Countdown;
